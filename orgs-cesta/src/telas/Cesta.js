@@ -1,5 +1,6 @@
 import React from "react";
 import { Image ,StyleSheet,Dimensions,Text, View} from "react-native";
+import Texto from "../componentes/texto";
 
 import topo from '../../assets/topo.png';
 import logo from '../../assets/logo.png';
@@ -11,18 +12,18 @@ export default function Cesta() {
 
     return <>
         <Image source={topo} style={estilos.topo}/>
-        <Text style={estilos.titulo}>Detalhes da cesta</Text>
+        <Texto style={estilos.titulo}>Detalhes da cesta</Texto>
 
         <View style={estilos.cesta}>
-            <Text style={estilos.nome}>Cesta De Verduras</Text>
+            <Texto style={estilos.nome}>Cesta De Verduras</Texto>
             <View style={estilos.fazenda}>
                 <Image source={logo} style={estilos.logo}/>
-                <Text style={estilos.nomefazenda}>Jenny Jack Farm</Text>
+                <Texto style={estilos.nomefazenda}>Jenny Jack Farm</Texto>
             </View>
-            <Text style={estilos.descricao}>Uma cesta para selecionar 
+            <Texto style={estilos.descricao}>Uma cesta para selecionar 
                   produtos cuidadosamente para sua cozinha
-            </Text>
-            <Text style={estilos.preco}>R$ 40,00</Text>
+            </Texto>
+            <Texto style={estilos.preco}>R$ 40,00</Texto>
         </View>
     </>
 }
@@ -55,13 +56,12 @@ const estilos =  StyleSheet.create({
         lineHeight:42,
         color:"#464646",
         fontFamily:"MontserratBold",
-
+        fontWeight:"bold"
     },
     nomefazenda:{
         fontSize:16,
         lineHeight:26,
         marginLeft:12,
-        fontFamily:"MontserratRegular",  
     },
     descricao:{
         color:"#A3A3A3",
